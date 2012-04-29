@@ -1,0 +1,17 @@
+{
+  "name": "Tested Annotations",
+  "version": "0.0",
+  "description" : "Allows Tested Users to add annotations to the Tested Podcast",
+  "permissions": [
+	"tabs"
+	],
+  "icons": { "16": "icon16.png",
+			 "48": "icon48.png",
+			 "128": "icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["http://www.tested.com/podcasts/*"],
+	  "css": ["jquery-bubble-popup.css"],
+      "js": ["jquery.js", "underscore.js", "jquery-bubble-popup.js", "popups.js"]
+    }]
+}
