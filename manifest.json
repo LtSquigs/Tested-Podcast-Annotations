@@ -1,6 +1,6 @@
 {
   "name": "Tested Annotations",
-  "version": "0.0",
+  "version": "1.0",
   "description" : "Allows Tested Users to add annotations to the Tested Podcast",
   "permissions": [
 	"tabs"
