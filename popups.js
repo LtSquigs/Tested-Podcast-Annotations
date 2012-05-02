@@ -217,7 +217,7 @@ function AddAnnotationToPanel(item)
     });
     
 	var comment = item['Comment'];
-	var linkReplace = new RegExp("\\[([\\w\\s]+)\\]{(https?://[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])}", "ig");
+	var linkReplace = new RegExp("\\[([\\W\\w\\s]+)\\]{(https?://[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])}", "ig");
 	comment = comment.replace(linkReplace, "<a href='$2' style=\"color: white; text-decoration: underline;\" target='_blank'>$1</a>");
     
     var content = $('<div style=\'margin-left: 5px; font-weight: normal; text-overflow: ellipsis; width: 350px; display: inline-block; white-space: nowrap; overflow: hidden;\'> - ' + comment + ' </div>');
@@ -328,7 +328,7 @@ function populateComment(item)
 	markerContainer.append(markerDiv);
 	
 	var comment = item['Comment'];
-	var linkReplace = new RegExp("\\[([\\w\\s]+)\\]{(https?://[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])}", "ig");
+	var linkReplace = new RegExp("\\[([\\W\\w\\s]+)\\]{(https?://[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])}", "ig");
 	comment = comment.replace(linkReplace, "<a href='$2' target='_blank'>$1</a>");
 
 	var inHtml = 	'<div style="min-height: 50px; min-width: 200px; color: #666;">' + 
